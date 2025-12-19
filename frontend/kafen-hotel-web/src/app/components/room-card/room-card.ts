@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class RoomCardComponent {
   @Input() title!: string;
-  @Input() price!: string;
   @Input() image!: string;
+  @Input() description!: string;
 }

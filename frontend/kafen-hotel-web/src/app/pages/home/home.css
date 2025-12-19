@@ -1,23 +1,43 @@
+.accommodations {
+  padding: 120px 80px;
+  background: #3f4433;
+  color: #fff;
+  text-align: center;
+}
+
+.accommodations h2 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  font-family: 'Playfair Display', serif;
+}
+
+.accommodations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* EXPERIENCE */
 .experience {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  padding: 120px 80px;
+  gap: 60px;
+  padding: 120px;
+  align-items: center;
   background: #faf9f6;
-}
-
-.experience h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  margin-bottom: 24px;
-}
-
-.experience p {
-  font-size: 16px;
-  line-height: 1.9;
 }
 
 .experience img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 14px;
+}
+
+.experience h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.experience p {
+  font-size: 15px;
+  line-height: 1.8;
 }

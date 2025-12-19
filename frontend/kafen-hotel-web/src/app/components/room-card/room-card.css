@@ -1,7 +1,9 @@
 .room-card {
+  background: #fff;
+  color: #333;
+  border-radius: 16px;
   overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
 .room-card img {
@@ -10,12 +12,23 @@
   object-fit: cover;
 }
 
-.info {
-  padding: 24px;
-  background: #fff;
+.room-card h3 {
+  font-size: 22px;
+  margin: 20px;
 }
 
-.info h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 8px;
+.room-card p {
+  font-size: 14px;
+  margin: 0 20px 20px;
+  line-height: 1.6;
+}
+
+.room-card button {
+  margin: 0 20px 30px;
+  background: #7a3e36;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  cursor: pointer;
 }

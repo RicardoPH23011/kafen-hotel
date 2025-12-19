@@ -1,45 +1,43 @@
-.hero {
-  position: relative;
+.kafen-hero {
   height: 100vh;
-  width: 100%;
-  background-image: url('/assets/images/kafen-hero-dome.jpg');
-  background-size: cover;
-  background-position: center;
+  background:
+    linear-gradient(to right, rgba(0,0,0,.55), rgba(0,0,0,.1)),
+    url('/assets/images/kafen-hero-dome.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 12%;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+.hero-text {
+  max-width: 420px;
+  color: white;
 }
 
-.hero-content {
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-}
-
-.hero-content h1 {
-  font-family: 'Playfair Display', serif;
+.hero-text h1 {
   font-size: 56px;
-  letter-spacing: 3px;
+  font-weight: 500;
   margin-bottom: 12px;
 }
 
-.hero-content p {
-  font-size: 16px;
-  letter-spacing: 2px;
-  margin-bottom: 32px;
+.hero-text span {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: white;
+  margin: 20px 0;
 }
 
-.hero-btn {
-  padding: 14px 36px;
-  border: 1px solid #ffffff;
+.hero-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: .85;
+}
+
+.hero-actions button {
+  margin-top: 30px;
+  padding: 14px 26px;
   background: transparent;
-  color: #ffffff;
+  border: 1px solid white;
+  color: white;
   cursor: pointer;
-  letter-spacing: 2px;
 }
