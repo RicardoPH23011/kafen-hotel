@@ -1,43 +1,92 @@
-.kafen-hero {
+.hero {
   height: 100vh;
-  background:
-    linear-gradient(to right, rgba(0,0,0,.55), rgba(0,0,0,.1)),
-    url('/assets/images/kafen-hero-dome.jpg') center/cover no-repeat;
+  width: 100vw;
+  background-image: url("/assets/images/kafen-domo-kafen.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  /* espacio para navbar fixed */
+  padding-top: 72px;
+}
+
+/* OVERLAY OSCURO */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* CONTENEDOR DEL CONTENIDO */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+
+  /* 👇 CLAVE: NO centramos verticalmente */
+  justify-content: flex-start;
+
+  /* empujamos todo hacia abajo */
+  padding-top: 600px;
+}
+
+/* KAFEN */
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 400;
+
+  /* GRAN espacio debajo */
+  margin-bottom: 120px;
+}
+
+/* GLAMPING — EXPERIENCE */
+.subtitle {
   display: flex;
   align-items: center;
-  padding-left: 12%;
+  gap: 14px;
+
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.9;
+
+  /* 🔥 ESPACIO MUY GRANDE ANTES DEL TEXTO PRINCIPAL */
+  margin-bottom: 220px;
 }
 
-.hero-text {
-  max-width: 420px;
-  color: white;
-}
-
-.hero-text h1 {
-  font-size: 56px;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-
-.hero-text span {
-  display: block;
-  width: 40px;
+.subtitle .line {
+  width: 60px;
   height: 1px;
-  background: white;
-  margin: 20px 0;
+  background: #ffffff;
+  opacity: 0.8;
 }
 
-.hero-text p {
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: .85;
+/* TEXTO PRINCIPAL */
+.headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 1px;
+
+  max-width: 900px;
 }
 
-.hero-actions button {
-  margin-top: 30px;
-  padding: 14px 26px;
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  cursor: pointer;
+/* ANIMACIONES */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.4s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

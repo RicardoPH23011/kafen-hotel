@@ -1,41 +1,29 @@
-<app-navbar></app-navbar>
-
 <app-hero></app-hero>
 
-<section class="accommodations">
-  <h2>Nuestros alojamientos</h2>
+<section class="experience-intro">
+  <div class="booking-frame">
 
-  <div class="accommodations-grid">
-    <app-room-card
-      title="Domo Suite"
-      image="assets/images/kafen-hero-dome.jpg"
-      description="Un domo exclusivo rodeado de naturaleza.">
-    </app-room-card>
+    <div class="field">
+      <label>Check in</label>
+      <input
+        type="date"
+        [value]="checkIn"
+        (change)="onCheckInChange($event.target.value)"
+      />
+    </div>
 
-    <app-room-card
-      title="Domo Interior"
-      image="assets/images/kafen-dome-interior.jpg"
-      description="Diseño geométrico y conexión con el entorno.">
-    </app-room-card>
+    <div class="field">
+      <label>Check out</label>
+      <input
+        type="date"
+        [value]="checkOut"
+        [min]="minCheckOut"
+        (change)="onCheckOutChange($event.target.value)"
+      />
+    </div>
 
-    <app-room-card
-      title="Tiny House"
-      image="assets/images/kafen-room-tiny.jpg"
-      description="Espacio cálido en madera para una estancia íntima.">
-    </app-room-card>
-  </div>
-</section>
-
-<section class="experience">
-  <div>
-    <h2>The Kafen Experience</h2>
-    <p>
-      Kafen Hotel es un refugio de glamping privado en Juayúa,
-      diseñado para el descanso y la desconexión.
-    </p>
+    <button>BOOK</button>
   </div>
 
-  <img src="assets/images/kafen-pool.jpg" alt="Kafen experience">
+  <h2>UNA EXPERIENCIA ÚNICA Y ROMÁNTICA</h2>
 </section>
-
-<app-footer></app-footer>

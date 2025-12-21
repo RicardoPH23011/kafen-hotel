@@ -1,43 +1,105 @@
-.accommodations {
-  padding: 120px 80px;
-  background: #3f4433;
-  color: #fff;
+/* =========================
+   SECCIÓN GENERAL
+========================= */
+.experience-intro {
+  background: #3f4532;
+  padding: 80px 0 100px;
   text-align: center;
 }
 
-.accommodations h2 {
-  font-size: 42px;
-  margin-bottom: 60px;
-  font-family: 'Playfair Display', serif;
-}
-
-.accommodations-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-/* EXPERIENCE */
-.experience {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  padding: 120px;
+/* =========================
+   CONTENEDOR DEL BOOKING
+========================= */
+.booking-frame {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
   align-items: center;
-  background: #faf9f6;
+
+  background: #ffffff;
+  padding: 22px 32px;
+  border-radius: 18px;
+  width: fit-content;
+  margin: 0 auto 56px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-.experience img {
-  width: 100%;
-  border-radius: 14px;
+/* =========================
+   CADA CAMPO
+========================= */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 160px;
 }
 
-.experience h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+/* =========================
+   LABEL PREMIUM (BOLD)
+========================= */
+.field label {
+  font-size: 11px;
+  color: #000000;
+  letter-spacing: 2px;
+  font-weight: 700;              /* 🔥 BOLD */
+  text-transform: uppercase;
 }
 
-.experience p {
-  font-size: 15px;
-  line-height: 1.8;
+/* =========================
+   INPUT DE FECHA
+========================= */
+.field input {
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
+  font-size: 14px;
+  padding: 8px 6px;
+  outline: none;
+
+  color: #2b2b2b;
+  font-family: 'Playfair Display', serif;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* =========================
+   FOCUS SUTIL
+========================= */
+.field input:focus {
+  border-bottom-color: #3e4b3c;
+}
+
+/* =========================
+   BOTÓN BOOK
+========================= */
+.booking-frame button {
+  background: #3e4b3c;
+  color: #ffffff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 12px;
+
+  cursor: pointer;
+  align-self: flex-end;
+
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+
+  transition: background 0.3s ease;
+}
+
+/* HOVER BOTÓN */
+.booking-frame button:hover {
+  background: #2f3a2d;
+}
+
+/* =========================
+   TÍTULO DEBAJO
+========================= */
+.experience-intro h2 {
+  color: #f3f1ec;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 400;
 }

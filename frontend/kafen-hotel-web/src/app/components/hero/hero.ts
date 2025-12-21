@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   templateUrl: './hero.html',
   styleUrls: ['./hero.css']
 })
-export class HeroComponent {}
+export class HeroComponent implements AfterViewInit {
+
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    const elements = this.el.nativeElement.querySelectorAll('.animate');
+
+    elements.forEach((el: HTMLElement) => {
+      setTimeout(() => el.classList.add('visible'), 300);
+    });
+  }
+}
